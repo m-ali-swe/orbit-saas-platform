@@ -1,99 +1,125 @@
 "use client";
-import Image from "next/image";
-import React, { useRef } from "react";
-import cogImage from "@/assets/cog.png";
-import cylinder from "@/assets/cylinder.png";
-import noodle from "@/assets/noodle.png";
-import { ArrowRight } from "lucide-react";
-import { motion, useScroll, useTransform } from "framer-motion";
 
-export default function Hero() {
-  const heroref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: heroref,
-    offset: ["start end", "end start"],
-  });
-  const translateY = useTransform(scrollYProgress, [0, 1], [50, -150]);
+import { Button } from "@/components/button";
+import { motion } from "framer-motion";
+import { ArrowRight, Activity, ShieldCheck, Zap } from "lucide-react";
 
+interface HeroProps {
+  onOpenWaitlist?: () => void;
+}
+
+export default function Hero({ onOpenWaitlist }: HeroProps) {
   return (
-    <div
-      ref={heroref}
-      className="pt-12 h-[800px] sm:h-auto justify-between overflow-y-hidden sm:pt-20 overflow-x-hidden bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_66%)] sm:flex flex-col sm:flex-row "
-    >
-      <div className="flex  z-0 pt-6  px-8 sm:px-10 flex-col gap-5 sm:w-[500px] flex-shrink-0">
-        <span className="border border-gray-400 px-3 py-1 rounded-md w-max text-xs">
-          Version 2.0 is here
-        </span>
-        <h1 className="font-bold text-4xl sm:text-6xl bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text">
-          Pathway to productivity
-        </h1>
-        <p className="text-xl text-[#010D3E] font-medium">
-          Celebrate the joy of accomplishment with an app designed to track your
-          progress, motivate your efforts, and celebrate your success.
-        </p>
+    <section className="relative min-h-[70vh] pt-28 pb-10 flex flex-col justify-center items-center overflow-hidden bg-grid-pattern">
+      {/* Background Radial Glow */}
+      <div className="absolute inset-0 bg-radial-gradient pointer-events-none" />
 
-        <div className="flex gap-5 items-center">
-          <button className="w-28 h-8 bg-gray-800 text-gray-100 rounded-md ">
-            Get for free
-          </button>
-          <button className="w-32 text-center justify-center h-8 bg-white rounded-md flex items-center">
-            Learn more <ArrowRight className="size-4" />{" "}
-          </button>
-        </div>
-      </div>
-
-      <div className="mt-5 lg:pl-32 relative w-[90%] flex-shrink-0 lg:w-[1000px] lg:justify-start flex sm:h-[648px] md:h-[600px]sm:mt-0 bg-gray-00 ">
+      {/* Orbit Graphic */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-30">
+        <div className="size-64 md:size-80 rounded-full bg-gradient-to-tr from-purple-600/30 via-indigo-600/20 to-violet-900/40 blur-3xl animate-pulse-glow" />
         <motion.div
-          animate={{
-            translateY: [-30, 30],
-          }}
-          transition={{
-            repeat: Infinity,
-            repeatType: "mirror",
-            duration: 3,
-            ease: "easeInOut",
-          }}
-          className="relative"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[380px] md:size-[500px] rounded-full border border-purple-500/20"
         >
-          <Image
-            className="md:h-auto md:w-auto lg:-translate-x-10 sm:h-[80%] sm:w-[80%] lg:h-[90%] md:translate-x-0 sm:-translate-x-24 "
-            alt="Cog"
-            src={cogImage}
-          />
-        </motion.div>
-
-        <motion.div
-          style={{
-            translateY: translateY,
-            rotate: 30,
-          }}
-          className="absolute z-10 hidden md:block top-0 -left-20 "
-        >
-          <Image
-            className=" "
-            alt="cylinder"
-            width={220}
-            height={220}
-            src={cylinder}
-          />
-        </motion.div>
-
-        <motion.div
-          style={{
-            translateY: translateY,
-            rotate: 30,
-          }}
-          className="absolute hidden md:block bottom-0 left-[550px]"
-        >
-          <Image
-            className=""
-            alt="noodle"
-            width={220}
-            height={220}
-            src={noodle}
-          />
+          <div className="size-2.5 bg-purple-400 rounded-full shadow-[0_0_10px_#a855f7] absolute -top-1.2 left-1/2 -translate-x-1/2" />
         </motion.div>
       </div>
-    </div>
+
+      {/* Hero Content */}
+      <div className="relative z-10 max-w-4xl mx-auto px-4 text-center space-y-5">
+        {/* Honest Portfolio Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: -15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass-panel bg-purple-950/40 border-purple-500/30 text-xs font-medium text-purple-200"
+        >
+          <Activity className="size-3.5 text-purple-400" />
+          <span>Interactive Portfolio Concept • B2B SaaS Platform Showcase</span>
+        </motion.div>
+
+        {/* Main Headline */}
+        <motion.h1
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight"
+        >
+          Streamline Product Growth with{" "}
+          <span className="bg-gradient-to-r from-purple-400 via-indigo-300 to-violet-400 bg-clip-text text-transparent">
+            Unified SaaS Analytics
+          </span>
+        </motion.h1>
+
+        {/* Sub-headline */}
+        <motion.p
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto font-normal leading-relaxed"
+        >
+          A sleek, interactive web application concept demonstrating modern SaaS analytics dashboards, automated user onboarding flows, and priority waitlist management.
+        </motion.p>
+
+        {/* Primary Buttons */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3"
+        >
+          <Button
+            variant="glow"
+            size="md"
+            onClick={onOpenWaitlist}
+            className="w-full sm:w-auto rounded-full px-7 py-2.5 text-xs font-semibold flex items-center justify-center gap-2"
+          >
+            <span>Request Early Access</span>
+            <ArrowRight className="size-4" />
+          </Button>
+
+          <Button
+            variant="secondary"
+            size="md"
+            onClick={() => {
+              const el = document.getElementById("showcase");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="w-full sm:w-auto rounded-full px-6 py-2.5 text-xs font-medium flex items-center justify-center gap-2"
+          >
+            <Zap className="size-3.5 text-purple-400" />
+            <span>Explore Feature Demo</span>
+          </Button>
+        </motion.div>
+
+        {/* Stats Strip */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="pt-6 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto"
+        >
+          {[
+            { label: "Productivity Lift", val: "+340%" },
+            { label: "Active Team Workspaces", val: "12,000+" },
+            { label: "Automated Workflows", val: "2.4M+" },
+            { label: "Average Setup Time", val: "< 5 Mins" },
+          ].map((stat, i) => (
+            <div
+              key={i}
+              className="p-3.5 rounded-2xl glass-card bg-white/[0.02] border-white/10 text-center"
+            >
+              <div className="text-xl sm:text-2xl font-extrabold text-white bg-gradient-to-r from-purple-300 to-indigo-200 bg-clip-text text-transparent">
+                {stat.val}
+              </div>
+              <div className="text-[11px] text-gray-400 mt-0.5 font-medium">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
   );
 }

@@ -1,6 +1,7 @@
 {
-  "name": "landing_page_saas",
-  "version": "0.1.0",
+  "name": "orbit-saas-platform",
+  "version": "1.0.0",
+  "description": "Modern B2B SaaS Growth & Analytics Platform Showcase built with Next.js 14, Framer Motion, and Tailwind CSS",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,17 +10,25 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "framer-motion": "^11.5.4",
+    "@base-ui/react": "^1.6.0",
+    "@jridgewell/trace-mapping": "^0.3.31",
+    "@swc/helpers": "^0.5.23",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.18.2",
     "lucide-react": "^0.441.0",
     "next": "14.2.11",
+    "next-themes": "^0.4.6",
     "react": "^18",
     "react-dom": "^18",
-    "sharp": "^0.34.3"
+    "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "browserslist": "^4.28.7",
+    "caniuse-lite": "^1.0.30001806",
     "eslint": "^8",
     "eslint-config-next": "14.2.11",
     "postcss": "^8",
