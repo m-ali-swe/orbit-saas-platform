@@ -11,7 +11,7 @@
 
 Designed as an interactive user interface concept, it features product growth analytics previews, real-time timeframe controls, dynamic pricing tier calculators, interactive customer review grids, and an accessible priority waitlist access pipeline.
 
-> 🌐 **Live Web Application**: [https://orbit-saas-platform.vercel.app](https://orbit-saas-platform.vercel.app)
+> 🌐 **Live Web Application**: <a href="https://orbit-saas-platform.vercel.app" target="_blank" rel="noopener noreferrer">https://orbit-saas-platform.vercel.app</a>
 
 ---
 
