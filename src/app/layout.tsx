@@ -14,6 +14,16 @@ export const metadata: Metadata = {
   title: "Orbit — Modern B2B SaaS Growth Platform Showcase",
   description:
     "Accelerate your engineering and product growth with Orbit. Autonomous analytics, real-time metrics, and workflow automation in one unified platform concept.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico?v=2" },
+      { url: "/favicon-32x32.png?v=2", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png?v=2", sizes: "16x16", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico?v=2",
+    apple: "/apple-touch-icon.png?v=2",
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
     title: "Orbit — Modern B2B SaaS Platform Showcase",
     description: "Accelerate your product growth with unified analytics & workflow automation.",

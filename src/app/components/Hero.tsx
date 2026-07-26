@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/button";
 import { motion } from "framer-motion";
-import { ArrowRight, Activity, ShieldCheck, Zap } from "lucide-react";
+import { ArrowRight, Activity, Zap } from "lucide-react";
 
 interface HeroProps {
   onOpenWaitlist?: () => void;

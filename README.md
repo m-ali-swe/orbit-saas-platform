@@ -1,85 +1,117 @@
-# 🚀 Orbit — Modern B2B SaaS Growth Platform Showcase
+# 🪐 Orbit — B2B SaaS Growth & Analytics Platform (Portfolio UI Concept)
 
 [![Next.js](https://img.shields.io/badge/Next.js-14.2-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-11.5-purple?style=for-the-badge&logo=framer)](https://www.framer.com/motion/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![App Router](https://img.shields.io/badge/Architecture-App_Router-000000?style=for-the-badge)](https://nextjs.org/docs/app)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-orbit--saas--platform.vercel.app-000000?style=for-the-badge&logo=vercel)](https://orbit-saas-platform.vercel.app)
 
-Orbit is a production-grade **Portfolio Showcase & B2B SaaS Interface Concept** built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion. It demonstrates modern web application design, interactive product analytics dashboards, and priority waitlist workflows.
+**Orbit** is a modern B2B SaaS frontend portfolio showcase built with **Next.js 14 (App Router)**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**.
 
-> ℹ️ **Portfolio Note**: This project is built as an interactive frontend showcase for live portfolio reviews and GitHub presentation. Analytics dashboards and waitlist reservations operate using frontend simulation logic.
+Designed as an interactive user interface concept, it features product growth analytics previews, real-time timeframe controls, dynamic pricing tier calculators, interactive customer review grids, and an accessible priority waitlist access pipeline.
 
----
-
-## ✨ Key Features & Design Highlights
-
-- 📊 **Product Analytics Dashboard Preview**: Interactive event streaming analytics display with timeframe switching (`7D`, `30D`, `90D`), cohort retention metrics, and throughput indicators.
-- 💬 **Text & Initials-Based Testimonials**: Clean review cards utilizing author initials badges (`font-bold bg-gradient-to-br`), star ratings, and non-official company titles (No image file dependencies).
-- 💳 **Billing Frequency Toggle**: Interactive monthly and annual pricing switcher with automated 20% savings calculation.
-- 🚀 **Priority Access Waitlist Modal**: Interactive modal dialog built with `shadcn` `Dialog`, `Input`, and `NativeSelect` primitives.
-- 🎨 **Modern Dark UI Design**: Soft pill-shaped buttons (`rounded-full`), dark glassmorphism styling (`glass-panel`, `glass-card`), subtle glow gradients, and Framer Motion infinite scrolling column animations.
-- 🏷️ **Non-Trademark Demo Branding**: All partner brand logos (`NOVAFLUX`, `VORTEX`, `KRYPTON`, `AETHERIA`) are fictional demo placeholders suitable for portfolio presentation.
+> 🌐 **Live Web Application**: [https://orbit-saas-platform.vercel.app](https://orbit-saas-platform.vercel.app)
 
 ---
 
-## 🛠️ Technology Stack
+## 🖼️ Interface Visuals
 
-- **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Animation**: [Framer Motion](https://www.framer.com/motion/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **UI Components**: `shadcn` primitives (`Dialog`, `Input`, `NativeSelect`)
+### 1. Hero Interface & Growth Command Center
+Dynamic orbit background animation, key performance indicators, and early access search triggers.
+
+![Orbit Hero Interface Preview](public/hero-preview.png)
+
+### 2. Real-Time Product Analytics Engine
+Interactive analytics preview displaying cohort retention, edge latency metrics, and timeframe switches (`7D`, `30D`, `90D`).
+
+![Orbit Analytics Engine Preview](public/analytics-dashboard.png)
+
+### 3. Transparent Pricing Tier Calculator
+Pricing module featuring an interactive Monthly and Annual billing toggle with automated 20% discount calculation.
+
+![Orbit Pricing Tiers Preview](public/pricing-tiers.png)
+
+### 4. Verified User Feedback & Testimonials
+Responsive tester review grid showcasing user feedback cards.
+
+![Orbit User Reviews Preview](public/user-reviews.png)
 
 ---
 
-## 📂 Project Structure
+## ✨ Features & Interactive UI Components
+
+- 🎯 **Growth Command Center (`Hero.tsx`)**: Hero section featuring GPU-accelerated orbit ring animations, KPI metric cards (+340% Productivity Lift, 12,000+ Active Teams), and instant waitlist modal triggers.
+- 📊 **Product Analytics Sandbox (`DashboardPreview.tsx`)**: Interactive rank and retention telemetry preview with instant timeframe switching (`7D`, `30D`, `90D`).
+- 💳 **Dynamic Pricing Calculator (`Pricing.tsx`)**: Monthly and Annual billing switcher with instant price calculation and feature comparison cards.
+- 💬 **Tester Feedback Grid (`Testimonials.tsx`)**: Grid showcasing verified user review cards with avatar indicators.
+- 🚀 **Priority Access Modal (`WaitlistModal.tsx`)**: Accessible modal dialog featuring role selection, email validation, and priority queue spot reservation.
+- 🎨 **Modern Design Tokens**: Dark mode aesthetic, glassmorphism containers (`glass-panel`), glowing gradient borders, and smooth Framer Motion layout transitions.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animation**: Framer Motion
+- **Icons**: Lucide React
+- **UI Primitives**: Custom Rounded Controls & Glass Panels
+
+---
+
+## 📂 Repository Structure
 
 ```
 orbit-saas-platform/
-├── public/                 # Site manifest, favicons & assets
+├── public/                 # High-resolution UI screenshots & web manifests
+│   ├── hero-preview.png        # Hero section screenshot
+│   ├── analytics-dashboard.png # Real-time analytics engine screenshot
+│   ├── pricing-tiers.png       # Pricing tiers screenshot
+│   ├── user-reviews.png       # Customer reviews screenshot
+│   └── site.webmanifest
 ├── src/
 │   ├── app/
-│   │   ├── components/
-│   │   │   ├── Header.tsx            # Sticky glassmorphism nav with mobile menu
-│   │   │   ├── Hero.tsx              # Dynamic hero banner with action triggers
-│   │   │   ├── LogoTicker.tsx        # Fictional demo brand carousel
-│   │   │   ├── ProductShowcase.tsx   # Interactive analytics preview dashboard
-│   │   │   ├── Pricing.tsx           # Monthly/Annual pricing switcher
-│   │   │   ├── Testimonials.tsx      # Text & Initials-based reviews (No images)
-│   │   │   ├── CallToAction.tsx      # Bottom callout section with email signup
-│   │   │   ├── WaitlistModal.tsx     # Interactive modal built with shadcn primitives
-│   │   │   └── Footer.tsx            # Enhanced footer & simulated portfolio badge
-│   │   ├── globals.css               # Glassmorphism & dark theme variables
-│   │   ├── layout.tsx                # OpenGraph & metadata setup
+│   │   ├── components/     # UI components
+│   │   │   ├── Header.tsx            # Translucent glassmorphism navbar
+│   │   │   ├── Hero.tsx              # Hero section & orbit animation
+│   │   │   ├── LogoTicker.tsx        # Fictional partner brand ticker
+│   │   │   ├── Features.tsx          # Tabbed feature showcase
+│   │   │   ├── DashboardPreview.tsx  # Interactive analytics dashboard
+│   │   │   ├── Pricing.tsx           # Monthly/Annual billing calculator
+│   │   │   ├── Testimonials.tsx      # Customer review grid
+│   │   │   ├── FAQ.tsx               # Accordion FAQ module
+│   │   │   ├── CallToAction.tsx      # Bottom newsletter & demo CTA
+│   │   │   ├── WaitlistModal.tsx     # Priority access waitlist modal
+│   │   │   └── Footer.tsx            # Footer & status badge
+│   │   ├── globals.css               # Design tokens & glassmorphism utilities
+│   │   ├── layout.tsx                # Metadata & viewport configuration
 │   │   └── page.tsx                  # Main page composition
 │   ├── components/
-│   │   ├── button.tsx                # Rounded pill button primitive
-│   │   └── ui/                       # shadcn primitives (Dialog, Input, NativeSelect)
+│   │   └── button.tsx                # Rounded pill button primitive
 │   └── lib/
-│       └── utils.ts                  # Tailwind class merge helper
+│       └── utils.ts                  # Tailwind class merger (`clsx` + `tailwind-merge`)
 ├── package.json
 └── README.md
 ```
 
 ---
 
-## 🚀 Quick Start Guide
+## 🚀 Local Development Setup
 
 ```bash
-# 1. Install dependencies
+# 1. Clone the repository
+git clone https://github.com/m-ali-swe/orbit-saas-platform.git
+
+# 2. Navigate to directory
+cd orbit-saas-platform
+
+# 3. Install dependencies
 npm install
 
-# 2. Run development server
+# 4. Start local development server
 npm run dev
-
-# 3. Build for production
-npm run build
 ```
 
----
-
-## 📜 License
-
-Distributed under the MIT License. See `LICENSE` for details.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
