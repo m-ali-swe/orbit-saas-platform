@@ -14,36 +14,15 @@ export default function Hero({ onOpenWaitlist }: HeroProps) {
       {/* Background Radial Glow */}
       <div className="absolute inset-0 bg-radial-gradient pointer-events-none" />
 
-      {/* Orbit Graphic Background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0">
-        {/* Core Radial Glow */}
-        <div className="size-72 md:size-96 rounded-full bg-gradient-to-tr from-purple-600/30 via-indigo-600/20 to-violet-900/40 blur-3xl animate-pulse" />
-
-        {/* Outer Orbit Ring */}
+      {/* Orbit Graphic */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-30">
+        <div className="size-64 md:size-80 rounded-full bg-gradient-to-tr from-purple-600/30 via-indigo-600/20 to-violet-900/40 blur-3xl animate-pulse-glow" />
         <motion.div
           animate={{ rotate: 360 }}
-          transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[550px] sm:size-[700px] md:size-[850px] rounded-full border border-purple-500/25"
+          transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[380px] md:size-[500px] rounded-full border border-purple-500/20"
         >
-          <div className="size-3 bg-purple-400 rounded-full shadow-[0_0_12px_#c084fc] absolute -top-1.5 left-1/2 -translate-x-1/2" />
-        </motion.div>
-
-        {/* Middle Orbit Ring (Dashed) */}
-        <motion.div
-          animate={{ rotate: -360 }}
-          transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[380px] sm:size-[480px] md:size-[600px] rounded-full border border-indigo-400/20 border-dashed"
-        >
-          <div className="size-2.5 bg-indigo-300 rounded-full shadow-[0_0_10px_#818cf8] absolute top-1/2 -right-1.25 -translate-y-1/2" />
-        </motion.div>
-
-        {/* Inner Orbit Ring */}
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[240px] sm:size-[300px] md:size-[380px] rounded-full border border-violet-500/30"
-        >
-          <div className="size-2 bg-violet-300 rounded-full shadow-[0_0_8px_#a78bfa] absolute -bottom-1 left-1/2 -translate-x-1/2" />
+          <div className="size-2.5 bg-purple-400 rounded-full shadow-[0_0_10px_#a855f7] absolute -top-1.2 left-1/2 -translate-x-1/2" />
         </motion.div>
       </div>
 

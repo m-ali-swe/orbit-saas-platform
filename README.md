@@ -18,7 +18,7 @@ Designed as an interactive user interface concept, it features product growth an
 ## 🖼️ Interface Visuals
 
 ### 1. Hero Interface & Growth Command Center
-Dynamic orbit background animation, key performance indicators, and early access waitlist modal triggers.
+Hero section showcasing growth analytics headline, performance metric cards, and early access triggers.
 
 ![Orbit Hero Interface Preview](public/hero-preview.png)
 
@@ -41,7 +41,7 @@ Responsive tester review grid showcasing user feedback cards.
 
 ## ✨ Features & Interactive UI Components
 
-- 🎯 **Growth Command Center (`Hero.tsx`)**: Hero section featuring GPU-accelerated orbit ring animations, KPI metric cards (+340% Productivity Lift, 12,000+ Active Teams), and instant waitlist modal triggers.
+- 🎯 **Growth Command Center (`Hero.tsx`)**: Hero section featuring headline composition, key performance indicator cards (+340% Productivity Lift, 12,000+ Active Teams), and instant waitlist modal triggers.
 - 📊 **Product Analytics Sandbox (`DashboardPreview.tsx`)**: Interactive rank and retention telemetry preview with instant timeframe switching (`7D`, `30D`, `90D`).
 - 💳 **Dynamic Pricing Calculator (`Pricing.tsx`)**: Monthly and Annual billing switcher with instant price calculation and feature comparison cards.
 - 💬 **Tester Feedback Grid (`Testimonials.tsx`)**: Grid showcasing verified user review cards with avatar indicators.
@@ -75,7 +75,7 @@ orbit-saas-platform/
 │   ├── app/
 │   │   ├── components/     # UI components
 │   │   │   ├── Header.tsx            # Translucent glassmorphism navbar
-│   │   │   ├── Hero.tsx              # Hero section & orbit animation
+│   │   │   ├── Hero.tsx              # Hero section & key metric cards
 │   │   │   ├── LogoTicker.tsx        # Fictional partner brand ticker
 │   │   │   ├── Features.tsx          # Tabbed feature showcase
 │   │   │   ├── DashboardPreview.tsx  # Interactive analytics dashboard
