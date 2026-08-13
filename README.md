@@ -18,7 +18,7 @@ Designed as an interactive user interface concept, it features product growth an
 ## 🖼️ Interface Visuals
 
 ### 1. Hero Interface & Growth Command Center
-Dynamic orbit background animation, key performance indicators, and early access search triggers.
+Dynamic orbit background animation, key performance indicators, and early access waitlist modal triggers.
 
 ![Orbit Hero Interface Preview](public/hero-preview.png)
 
